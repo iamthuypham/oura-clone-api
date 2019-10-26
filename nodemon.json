@@ -9,9 +9,7 @@
   "runOnChangeOnly": false,
   "watch": ["src/**/*.js", "src/**/*.graphql", "src/**/*.gql"],
   "env": {
-    "NODE_ENV": "development",
-    "DB_USER": "rosalind",
-    "DB_PASS": "v3rtical"
+    "NODE_ENV": "development"
   },
   "ext": "js,json,graphql"
 }
