@@ -134,12 +134,11 @@ const start = async () => {
           const response = await fetch(`https://cloud.ouraring.com/oauth/token?grant_type=authorization_code&code=${args.code}&client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`, {
             method: 'POST'
           });
+          console.log(data);
           data = await response.json();
         } catch (error) {
           return new Error(error);
         }
-
-        console.log(data);
 
         if (data.code && data.code !== 200) {
           return new Error(data.message);
@@ -198,7 +197,6 @@ const start = async () => {
     port: _config.default.port
   });
   console.log(`GQL server ready at ${url}`);
-}; // QTXAWCNG3THG2YAUU6YFS2EUXDONYILI
-
+};
 
 exports.start = start;

@@ -122,7 +122,6 @@ export const start = async () => {
               method: 'POST'
             }
           )
-          console.log(data)
           data = await response.json()
         } catch (error) {
           return new Error(error)
