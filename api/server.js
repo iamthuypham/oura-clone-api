@@ -122,11 +122,12 @@ export const start = async () => {
               method: 'POST'
             }
           )
+          console.log(data)
           data = await response.json()
         } catch (error) {
           return new Error(error)
         }
-        if (data.code !== 200) {
+        if (data.code && data.code !== 200) {
           return new Error(data.message)
         }
         return data
@@ -176,5 +177,3 @@ export const start = async () => {
   const { url } = await server.listen({ port: config.port })
   console.log(`GQL server ready at ${url}`)
 }
-
-// QTXAWCNG3THG2YAUU6YFS2EUXDONYILI

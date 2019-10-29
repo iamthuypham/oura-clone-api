@@ -139,7 +139,9 @@ const start = async () => {
           return new Error(error);
         }
 
-        if (data.code !== 200) {
+        console.log(data);
+
+        if (data.code && data.code !== 200) {
           return new Error(data.message);
         }
 
