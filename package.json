@@ -38,7 +38,7 @@
     "lodash": "^4.17.11",
     "mongoose": "^5.3.14",
     "validator": "^10.9.0",
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^5.0.0",
     "cuid": "^2.1.4"
   },
   "devDependencies": {
